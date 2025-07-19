@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar, User, Clock, BookOpen, Video, Mic } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
+import { ProgressiveImage } from "@/components/ui/progressive-image";
 
 const featuredInsights = [
   {
@@ -218,12 +218,12 @@ export function InsightsFeatured() {
           <div className="grid lg:grid-cols-2 gap-8">
             {featuredInsights.map((insight, index) => (
               <article key={index} className="group bg-white rounded-xl border shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden">
-                <div className="relative h-64 overflow-hidden">
-                  <Image
+                <div className="relative">
+                  <ProgressiveImage
                     src={insight.image}
                     alt={insight.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    fill={true}
+                    className="h-64 group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute top-4 left-4">
                     <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-[#1E40AF] text-white">
@@ -291,14 +291,12 @@ export function InsightsFeatured() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {allInsights.slice(2, 8).map((insight, index) => (
               <article key={index} className="group bg-white rounded-xl border shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 overflow-hidden">
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src={insight.image}
-                    alt={insight.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
+                <ProgressiveImage
+                  src={insight.image}
+                  alt={insight.title}
+                  fill={true}
+                  className="h-48 group-hover:scale-105 transition-transform duration-300"
+                />
                 
                 <div className="p-6 space-y-4">
                   <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">

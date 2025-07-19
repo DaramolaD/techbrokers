@@ -177,7 +177,7 @@ export const insightsData: Insight[] = [
     date: "February 25, 2024",
     readTime: "9 min read",
     category: "Digital Banking",
-    image: "/images/mobilemoney.jpg",
+    image: "/images/evolutionmobielmoney.jpg",
     type: "article",
     tags: ["Mobile Money", "Digital Banking", "Innovation"],
     content: `
@@ -234,7 +234,7 @@ export const insightsData: Insight[] = [
     date: "February 15, 2024",
     readTime: "6 min read",
     category: "Startup Ecosystem",
-    image: "/images/investmenttrends.jpg",
+    image: "/images/investortrend.jpg",
     type: "article",
     tags: ["Investment", "Venture Capital", "Fintech"],
     content: `

@@ -13,7 +13,7 @@ const trustedCompanies = [
 
 export function TrustedBy() {
   return (
-    <section className="py-16 bg-muted/20">
+    <section className="py-16 bg-primary-tint">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-8">
           {/* Tag */}

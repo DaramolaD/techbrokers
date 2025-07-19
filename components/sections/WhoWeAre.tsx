@@ -3,30 +3,13 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
-const cSuiteExperience = [
-  {
-    title: "C-Suite Experience",
-    description: "Strategy and execution from leaders who've sat at the table and delivered results."
-  },
-  {
-    title: "C-Suite Experience", 
-    description: "Strategy and execution from leaders who've sat at the table and delivered results."
-  },
-  {
-    title: "C-Suite Experience",
-    description: "Strategy and execution from leaders who've sat at the table and delivered results."
-  },
-  {
-    title: "C-Suite Experience",
-    description: "Strategy and execution from leaders who've sat at the table and delivered results."
-  }
-];
+
 
 export function WhoWeAre() {
   return (
     <section className="py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="space-y-8">
             {/* Tag */}
@@ -52,7 +35,7 @@ export function WhoWeAre() {
               </div>
             </div>
 
-            <Button size="lg" className="px-8">
+            <Button size="lg" className="px-8 bg-[#1E40AF] hover:bg-[#1E40AF]/90">
               Meet the Founder <ArrowRight className="text-white w-4 h-4" />
             </Button>
           </div>

@@ -3,24 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
-const cSuiteExperience = [
-  {
-    title: "C-Suite Experience",
-    description: "Strategy and execution from leaders who've sat at the table and delivered results."
-  },
-  {
-    title: "C-Suite Experience", 
-    description: "Strategy and execution from leaders who've sat at the table and delivered results."
-  },
-  {
-    title: "C-Suite Experience",
-    description: "Strategy and execution from leaders who've sat at the table and delivered results."
-  },
-  {
-    title: "C-Suite Experience",
-    description: "Strategy and execution from leaders who've sat at the table and delivered results."
-  }
-];
+
 
 export function WhoWeAre() {
   return (

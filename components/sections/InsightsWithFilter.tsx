@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar, User, Clock } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { insightsData, categories } from "@/lib/insights-data";
 
 // Loading skeleton component
@@ -33,14 +33,16 @@ export function InsightsWithFilter() {
   const [imageLoadingStates, setImageLoadingStates] = useState<{ [key: string]: boolean }>({});
 
   // Filter insights based on category
-  const filteredInsights = insightsData.filter((insight) => {
-    return selectedCategory === "All" || insight.category === selectedCategory;
-  });
+  const filteredInsights = useMemo(() => {
+    return insightsData.filter((insight) => {
+      return selectedCategory === "All" || insight.category === selectedCategory;
+    });
+  }, [selectedCategory]);
 
   // Show all insights or limited based on toggle
-  const displayedInsights = showAll
-    ? filteredInsights
-    : filteredInsights.slice(0, 9);
+  const displayedInsights = useMemo(() => {
+    return showAll ? filteredInsights : filteredInsights.slice(0, 9);
+  }, [filteredInsights, showAll]);
 
   // Handle image load
   const handleImageLoad = (insightId: string) => {
@@ -54,7 +56,7 @@ export function InsightsWithFilter() {
       states[insight.id] = true;
     });
     setImageLoadingStates(states);
-  }, [selectedCategory, showAll]);
+  }, [displayedInsights]);
 
   return (
     <section className="py-16 bg-gradient-to-br from-[#1E40AF]/5 via-white to-[#1E40AF]/5">

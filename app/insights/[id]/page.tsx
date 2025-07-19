@@ -7,7 +7,6 @@ import {
   Calendar,
   User,
   Clock,
-  Share2,
   BookOpen,
   Tag,
   Linkedin,

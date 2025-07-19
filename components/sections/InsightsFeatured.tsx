@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Calendar, User, Clock, TrendingUp, BookOpen, Video, Mic } from "lucide-react";
+import { ArrowRight, Calendar, User, Clock, BookOpen, Video, Mic } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 

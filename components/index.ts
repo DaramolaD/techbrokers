@@ -16,7 +16,6 @@ export { AboutTeam } from "./sections/AboutTeam";
 export { ServicesDetailed } from "./sections/ServicesDetailed";
 export { ServicesMethodology } from "./sections/ServicesMethodology";
 export { InsightsFeatured } from "./sections/InsightsFeatured";
-export { InsightsCategories } from "./sections/InsightsCategories";
 export { InsightsPreview } from "./sections/InsightsPreview";
 export { InsightsWithFilter } from "./sections/InsightsWithFilter";
 

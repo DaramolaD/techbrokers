@@ -18,15 +18,16 @@ import Link from "next/link";
 import { insightsData, getRelatedInsights } from "@/lib/insights-data";
 
 interface InsightPageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
 export async function generateMetadata({
   params,
 }: InsightPageProps): Promise<Metadata> {
-  const insight = insightsData.find((insight) => insight.id === params.id);
+  const { id } = await params;
+  const insight = insightsData.find((insight) => insight.id === id);
 
   if (!insight) {
     return {
@@ -70,9 +71,10 @@ export async function generateMetadata({
 
 
 
-export default function InsightPage({ params }: InsightPageProps) {
-  const insight = insightsData.find((insight) => insight.id === params.id);
-  const relatedInsights = getRelatedInsights(params.id, 3);
+export default async function InsightPage({ params }: InsightPageProps) {
+  const { id } = await params;
+  const insight = insightsData.find((insight) => insight.id === id);
+  const relatedInsights = getRelatedInsights(id, 3);
 
   // Structured data for SEO
   const structuredData = insight ? {

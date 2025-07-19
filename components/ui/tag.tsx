@@ -15,7 +15,7 @@ const tagVariants = {
 export function Tag({ children, className, variant = "default" }: TagProps) {
   return (
     <div className={cn(
-      "inline-flex items-center w-fit gap-2 px-4 py-2 rounded-full border text-sm sm:text-base lg:text-lg font-semibold",
+      "inline-flex items-center w-fit gap-2 px-4 py-2 rounded-full border text-sm sm:text-base font-semibold",
       tagVariants[variant],
       className
     )}>

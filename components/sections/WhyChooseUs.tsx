@@ -1,22 +1,21 @@
 import { Button } from "@/components/ui/button";
 import { Tag } from "../ui/tag";
-import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Building2, Zap, Rocket, CreditCard, Brain, Users, GraduationCap, Lightbulb } from "lucide-react";
 
-const whyChooseCards = [
+const allServices = [
   {
     title: "Digital Banking Strategy & Transformation",
     description: "Launch and scale digital banks, super apps, and fintech ecosystems with full-stack support—from architecture to go-live.",
     features: [
       "Neo-bank & challenger bank setup",
-      "Open banking enablement",
+      "Open banking enablement", 
       "Core banking & ERP support",
       "Super app design & agency banking",
       "API architecture & fintech integration",
       "UI/UX optimization",
       "Regulatory sandbox navigation"
     ],
-    bgImage: "/images/digital-banking-bg.jpg"
+    icon: Building2
   },
   {
     title: "Technology Consulting & System Integration",
@@ -30,7 +29,7 @@ const whyChooseCards = [
       "Chatbots, IVR & document intelligence",
       "GenAI use cases"
     ],
-    bgImage: "/images/tech-consulting-bg.jpg"
+    icon: Zap
   },
   {
     title: "Product Innovation & Go-to-Market",
@@ -44,42 +43,47 @@ const whyChooseCards = [
       "Card programs (debit, credit, prepaid)",
       "G2P payment systems"
     ],
-    bgImage: "/images/product-innovation-bg.jpg"
-  }
-];
-
-const additionalServices = [
+    icon: Rocket
+  },
   {
     title: "Payments & Card Services Advisory",
     description: "Design secure, scalable payments infrastructure across card issuing, merchant, and cross-border channels.",
-    features: ["Card programs (debit, credit, prepaid)", "G2P payment systems", "Gateway integration (Visa, NIBSS, etc.)"]
+    features: ["Card programs (debit, credit, prepaid)", "G2P payment systems", "Gateway integration (Visa, NIBSS, etc.)"],
+    icon: CreditCard
   },
   {
     title: "AI, RPA & Intelligent Automation",
     description: "Deploy cutting-edge automation to optimize operations, fight fraud, and enhance customer experience.",
-    features: ["Risk scoring & fraud detection", "Chatbots, IVR & document intelligence", "GenAI use cases"]
+    features: ["Risk scoring & fraud detection", "Chatbots, IVR & document intelligence", "GenAI use cases"],
+    icon: Brain
   },
   {
     title: "Financial Inclusion & Ecosystem Solutions",
     description: "Banking innovation for rural populations, MSMEs, cooperatives, and underbanked youth & women.",
-    features: ["Credit union & smart co-op tech", "Remittance & diaspora finance", "Edtech, healthtech, agritech finance enablement"]
+    features: ["Credit union & smart co-op tech", "Remittance & diaspora finance", "Edtech, healthtech, agritech finance enablement"],
+    icon: Users
   },
   {
     title: "Strategic Advisory & CxO Services",
     description: "Gain access to board-level tech strategy and interim leadership to guide your digital journey.",
-    features: ["Interim CDO/CIO support", "Financial modeling", "Africa expansion strategy", "Public tech modernization"]
+    features: ["Interim CDO/CIO support", "Financial modeling", "Africa expansion strategy", "Public tech modernization"],
+    icon: Lightbulb
   },
   {
     title: "EdTech, GovTech & University Digitalization",
     description: "Transform public institutions with digital identity, e-learning, and cashless campus ecosystems.",
-    features: ["Student ID cards, wallets, access control", "Capital raise materials", "University ecosystem design"]
+    features: ["Student ID cards, wallets, access control", "Capital raise materials", "University ecosystem design"],
+    icon: GraduationCap
   },
   {
     title: "Startup Acceleration & Venture Readiness",
     description: "Scale your startup with product validation, pitch support, and investor-ready assets.",
-    features: ["Talent sourcing & investor readiness", "Venture build-as-a-service", "Capital raise materials"]
+    features: ["Talent sourcing & investor readiness", "Venture build-as-a-service", "Capital raise materials"],
+    icon: Rocket
   }
 ];
+
+
 
 export function WhyChooseUs() {
   return (
@@ -97,98 +101,57 @@ export function WhyChooseUs() {
           </p>
         </div>
 
-        {/* Main 3 Column Cards */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {whyChooseCards.map((card, index) => (
-            <div
-              key={index}
-              className="group relative rounded-2xl p-6 border hover:shadow-lg transition-all duration-300 hover:-translate-y-1 overflow-hidden h-[500px]"
-            >
-              {/* Background Image */}
-              <div className="absolute inset-0 z-0">
-                <Image
-                  src={card.bgImage}
-                  alt={`${card.title} background`}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
-                  priority={index < 2}
-                  quality={95}
-                  placeholder="blur"
-                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-              </div>
-
-              {/* Content */}
-              <div className="relative flex flex-col justify-between h-full z-10">
-                <div>
-                  <h3 className="text-xl font-semibold mb-3 text-white">{card.title}</h3>
+        {/* Unified Services Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {allServices.map((service, index) => {
+            const IconComponent = service.icon;
+            return (
+              <div
+                key={index}
+                className="group p-6 border rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-white"
+              >
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-[#1E40AF]/10 rounded-lg flex items-center justify-center mr-4">
+                    <IconComponent className="w-6 h-6 text-[#1E40AF]" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-[#1E40AF]">{service.title}</h3>
                 </div>
                 
-                <div className="mt-auto">
-                  <p className="text-white/90 mb-4 text-sm">
-                    {card.description}
-                  </p>
+                <p className="text-muted-foreground text-sm mb-4">
+                  {service.description}
+                </p>
 
-                  <ul className="space-y-1 mb-4">
-                    {card.features.slice(0, 3).map((feature, featureIndex) => (
-                      <li
-                        key={featureIndex}
-                        className="flex items-center text-xs text-white/80"
-                      >
-                        <div className="w-1 h-1 bg-white rounded-full mr-2"></div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-
-                  <div className="mt-4">
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      className="text-white hover:text-white hover:bg-white/20 text-xs"
-                      asChild
+                <ul className="space-y-2 mb-4">
+                  {service.features.slice(0, 4).map((feature, featureIndex) => (
+                    <li
+                      key={featureIndex}
+                      className="flex items-center text-xs text-muted-foreground"
                     >
-                      <a href="#">
-                        Learn more <ArrowRight className="w-3 h-3" />
-                      </a>
-                    </Button>
-                  </div>
+                      <div className="w-1 h-1 bg-[#1E40AF] rounded-full mr-2"></div>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="mt-auto">
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="text-[#1E40AF] hover:text-[#1E40AF] hover:bg-[#1E40AF]/20 text-xs font-medium"
+                    asChild
+                  >
+                    <a href="#">
+                      Learn more <ArrowRight className="w-3 h-3" />
+                    </a>
+                  </Button>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Additional Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {additionalServices.map((service, index) => (
-            <div
-              key={index}
-              className="p-6 border rounded-xl hover:shadow-md transition-all duration-300 hover:-translate-y-1"
-            >
-              <h4 className="text-lg font-semibold mb-3 text-[#1E40AF]">{service.title}</h4>
-              <p className="text-muted-foreground text-sm mb-4">
-                {service.description}
-              </p>
-              <ul className="space-y-1">
-                {service.features.map((feature, featureIndex) => (
-                  <li
-                    key={featureIndex}
-                    className="flex items-center text-xs text-muted-foreground"
-                  >
-                    <div className="w-1 h-1 bg-[#1E40AF] rounded-full mr-2"></div>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         <div className="text-center mt-12">
-          <Button size="lg" className="px-8">
+          <Button size="lg" className="px-8 bg-[#1E40AF] hover:bg-[#1E40AF]/90">
             See Full Service Guide <ArrowRight className="w-4 h-4 ml-2" />
           </Button>
         </div>

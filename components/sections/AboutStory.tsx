@@ -1,39 +1,5 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Target, Lightbulb, Shield, Heart } from "lucide-react";
+import { Target, Lightbulb, Shield, Heart } from "lucide-react";
 import Image from "next/image";
-
-const milestones = [
-  {
-    year: "2014",
-    title: "Foundation",
-    description: "Tech Brokers Ltd. founded by Wasiu Popoola with a vision to bridge Africa's digital divide"
-  },
-  {
-    year: "2016",
-    title: "First Major Project",
-    description: "Successfully launched digital banking platform for a leading Nigerian bank"
-  },
-  {
-    year: "2018",
-    title: "Regional Expansion",
-    description: "Extended operations to 5 African countries, serving 50+ financial institutions"
-  },
-  {
-    year: "2020",
-    title: "Government Innovation",
-    description: "Pioneered digital transformation for government services across West Africa"
-  },
-  {
-    year: "2022",
-    title: "Startup Ecosystem",
-    description: "Launched accelerator program, mentoring 100+ fintech startups"
-  },
-  {
-    year: "2024",
-    title: "Global Recognition",
-    description: "Named Africa's leading digital transformation consultancy"
-  }
-];
 
 const values = [
   {

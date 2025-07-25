@@ -98,7 +98,7 @@ export function ServicesMethodology() {
         </div>
 
         {/* Success Metrics */}
-        <div className="mb-24">
+        {/* <div className="mb-24">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-semibold leading-tight mb-6">
               Our Track Record
@@ -120,7 +120,7 @@ export function ServicesMethodology() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Why Choose Our Services */}
         <div>

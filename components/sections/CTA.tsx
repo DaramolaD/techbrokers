@@ -15,7 +15,7 @@ export function CTA() {
               </h2>
               
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Whether you&apos;re a fintech founder, a public sector innovator, or a bank CTO—we&apos;re ready to move fast and deliver results.
+                Whether you&apos;re a fintech founder, a public sector innovator, or a bank CEO—we&apos;re ready to move fast and deliver results.
               </p>
             </div>
             

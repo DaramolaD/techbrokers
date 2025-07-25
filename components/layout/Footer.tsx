@@ -39,7 +39,8 @@ const footerSections = [
       { name: "Digital Strategy", href: "/services/digital-strategy" },
       { name: "Fintech Solutions", href: "/services/fintech" },
       { name: "Government Innovation", href: "/services/government" },
-      { name: "Startup Acceleration", href: "/services/startup" }
+      { name: "Startup Acceleration", href: "/services/startup" },
+      { name: "Consultants", href: "/services/startup" }
     ]
   },
   {
@@ -73,7 +74,7 @@ export function Footer() {
               <span className="font-bold text-xl text-white">Tech Brokers</span>
             </div>
             <p className="text-[#DFDFDF] max-w-sm">
-              Your strategy-to-execution partner for digital transformation across fintech, banking, and public innovation.
+              Your strategy-to-execution partner for digital transformation across businesses.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (

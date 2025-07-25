@@ -15,10 +15,10 @@ const caseStudies = [
   },
   {
     id: "microfinance-institution",
-    category: "Microfinance Institution",
-    title: "Transforming Loan Origination with Process Automation",
+    category: "Lending Service",
+    title: "Transforming Lending Experience with Process Automation",
     description:
-      "Implemented RPA and AI-driven credit scoring to reduce approval time by 65%",
+      "With our expertise in RPA and AI-driven credit scoring, streamlined loan origination, credit bureau integration and other AI capabilities, we transform lending process into a 5 minutes experience from request to disbursement.",
     image: "/images/service_2.jpg",
     readMoreText: "Read Full Case Study",
   },
@@ -32,7 +32,7 @@ export function CaseStudies() {
           <Tag variant="outline">Case Studies</Tag>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal leading-tight">
-            Case Studies & Execution Wins
+            Case Studies & Expertise Wins
           </h2>
 
           <p className="text-lg text-muted-foreground leading-relaxed max-w-5xl">
@@ -42,7 +42,7 @@ export function CaseStudies() {
             we turn strategy into scalable success.
           </p>
 
-          <p className="text-base text-muted-foreground max-w-5xl">
+          <p className="text-lg text-muted-foreground leading-relaxed max-w-5xl">
             Here&apos;s a glimpse of what execution looks like with Tech Brokers
             Ltd.
           </p>

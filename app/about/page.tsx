@@ -4,7 +4,6 @@ import { Footer } from "@/components/layout/Footer";
 import { PageHero } from "@/components/sections/PageHero";
 import { AboutStory } from "@/components/sections/AboutStory";
 import { AboutTeam } from "@/components/sections/AboutTeam";
-import { TrustedBy } from "@/components/sections/TrustedBy";
 import { CTA } from "@/components/sections/CTA";
 
 export const metadata: Metadata = {
@@ -30,7 +29,6 @@ export default function AboutPage() {
         />
         <AboutStory />
         <AboutTeam />
-        <TrustedBy />
         <CTA />
       </main>
       <Footer />

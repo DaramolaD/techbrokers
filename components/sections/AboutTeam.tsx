@@ -3,10 +3,12 @@ import Image from "next/image";
 
 const leadership = [
   {
-    name: "Wasiu Popoola",
+    name: "Wasiu Popoola O.",
     role: "Founder & CEO",
-    bio: "Industry veteran with 15+ years in digital transformation, having led projects for major banks and governments across Africa.",
-    image: "/images/about.jpg",
+    bio: "Seasoned global technology and financial services leader with over two decades of executive experience driving digital transformation, innovation and fintech solutions across Africa and beyond. As CEO of Tech Brokers Ltd, he steers strategy, product innovation and go-to-market expansion to accelerate clients' digital journeys across Financial, Education, Agriculture, Transport & Logistics, Commerce and Public sectors.",
+    detailedBio: "Prior to founding Tech Brokers, Wasiu served as Chief Digital Officer and CIO of Lotus Bank, where he architected the bank's end-to-end digital banking structure, and as Chief Digital & Innovation Officer in the foundational team at Parallex Bank. He has held leadership roles at Sterling Bank, First Bank, Access Bank and FCMB, spearheading numerous large-scale digital payments and transformation projects for blue-chip clients including Promasidor, Multichoice Nigeria and state governments.",
+    credentials: "MSc Computer Science, Executive MBA, MIT Digital Transformation, PMI, ISACA, SAP consulting",
+    image: "/images/wasiupopool.jpg",
     linkedin: "#",
     twitter: "#",
     website: "#"
@@ -15,6 +17,8 @@ const leadership = [
     name: "Sarah Johnson",
     role: "Chief Technology Officer",
     bio: "Former Google engineer with expertise in scalable fintech architectures and emerging technologies.",
+    detailedBio: "Leading our technical strategy and innovation initiatives with deep expertise in cloud-native architectures and AI-driven solutions.",
+    credentials: "MSc Computer Science, Google Engineering, AWS Solutions Architect",
     image: "/images/service_1.jpg",
     linkedin: "#",
     twitter: "#",
@@ -24,6 +28,8 @@ const leadership = [
     name: "David Okechukwu",
     role: "Head of Strategy",
     bio: "Strategy consultant with deep experience in African markets and government innovation projects.",
+    detailedBio: "Driving strategic initiatives and market expansion across Africa with focus on digital transformation and innovation.",
+    credentials: "MBA Strategy, McKinsey & Company, African Development Bank",
     image: "/images/service_2.jpg",
     linkedin: "#",
     twitter: "#",
@@ -69,45 +75,64 @@ export function AboutTeam() {
               Meet Our Leadership
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Experienced leaders driving innovation and transformation across Africa.
+              Experienced leaders driving innovation and transformation across Africa with decades of combined expertise in fintech, digital banking, and technology consulting.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="space-y-12">
             {leadership.map((leader, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl border shadow-sm hover:shadow-lg transition-shadow overflow-hidden"
+                className={`bg-white rounded-xl border shadow-sm hover:shadow-lg transition-shadow overflow-hidden ${
+                  index === 0 ? 'ring-2 ring-[#1E40AF] ring-opacity-20' : ''
+                }`}
               >
-                <div className="relative h-64 overflow-hidden">
-                  <Image
-                    src={leader.image}
-                    alt={leader.name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                
-                <div className="p-6 space-y-4">
-                  <div>
-                    <h3 className="text-xl font-semibold mb-1">{leader.name}</h3>
-                    <p className="text-[#1E40AF] font-medium">{leader.role}</p>
+                <div className="grid lg:grid-cols-3 gap-0">
+                  <div className="relative h-80 lg:h-full overflow-hidden">
+                    <Image
+                      src={leader.image}
+                      alt={leader.name}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                   
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {leader.bio}
-                  </p>
-                  
-                  <div className="flex space-x-3">
-                    <a href={leader.linkedin} className="text-muted-foreground hover:text-[#1E40AF] transition-colors">
-                      <Linkedin className="w-5 h-5" />
-                    </a>
-                    <a href={leader.twitter} className="text-muted-foreground hover:text-[#1E40AF] transition-colors">
-                      <Twitter className="w-5 h-5" />
-                    </a>
-                    <a href={leader.website} className="text-muted-foreground hover:text-[#1E40AF] transition-colors">
-                      <Globe className="w-5 h-5" />
-                    </a>
+                  <div className="lg:col-span-2 p-8 space-y-6">
+                    <div>
+                      <h3 className="text-2xl font-semibold mb-2">{leader.name}</h3>
+                      <p className="text-[#1E40AF] font-medium text-lg mb-4">{leader.role}</p>
+                    </div>
+                    
+                    <div className="space-y-4">
+                      <p className="text-muted-foreground leading-relaxed">
+                        {leader.bio}
+                      </p>
+                      
+                      {leader.detailedBio && (
+                        <p className="text-muted-foreground leading-relaxed text-sm">
+                          {leader.detailedBio}
+                        </p>
+                      )}
+                      
+                      {leader.credentials && (
+                        <div className="pt-2">
+                          <p className="text-sm font-medium text-[#1E40AF] mb-1">Credentials & Certifications:</p>
+                          <p className="text-sm text-muted-foreground">{leader.credentials}</p>
+                        </div>
+                      )}
+                    </div>
+                    
+                    <div className="flex space-x-3 pt-4">
+                      <a href={leader.linkedin} className="text-muted-foreground hover:text-[#1E40AF] transition-colors">
+                        <Linkedin className="w-5 h-5" />
+                      </a>
+                      <a href={leader.twitter} className="text-muted-foreground hover:text-[#1E40AF] transition-colors">
+                        <Twitter className="w-5 h-5" />
+                      </a>
+                      <a href={leader.website} className="text-muted-foreground hover:text-[#1E40AF] transition-colors">
+                        <Globe className="w-5 h-5" />
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -122,7 +147,7 @@ export function AboutTeam() {
               Our Expertise
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Deep domain knowledge across key areas of digital transformation.
+              Deep domain knowledge across key areas of digital transformation and fintech innovation.
             </p>
           </div>
 

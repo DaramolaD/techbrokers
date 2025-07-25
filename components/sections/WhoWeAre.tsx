@@ -60,7 +60,7 @@ export function WhoWeAre() {
               {/* Main Image */}
               <div className="relative rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="/images/about.jpg"
+                  src="/images/wasiupopool.jpg"
                   alt="Wasiu Popoola - Founder and CEO of Tech Brokers Ltd, digital transformation expert and fintech consultant"
                   width={600}
                   height={400}

@@ -148,10 +148,14 @@ const detailedServices = [
       "Payment Gateway Integration",
       "Mobile Banking Applications",
       "Digital Identity Solutions",
-      "Regulatory Compliance Systems"
+      "Regulatory Compliance Systems",
+      "Financial Inclusion & Agency Banking",
+      "Merchant Acquiring services",
+      "Debit and Credit",
+      "Card Business"
     ],
     image: "/images/service_1.jpg",
-    benefits: ["120-day launch timeline", "99.9% uptime guarantee", "Regulatory compliant"]
+    benefits: ["Quick time to market", "99.9% uptime guarantee", "Regulatory compliant"]
   },
   {
     category: "Technology Consulting",
@@ -187,7 +191,8 @@ const detailedServices = [
       "Process Automation",
       "Data Management Solutions",
       "E-Government Portals",
-      "Smart City Initiatives"
+      "Smart City Initiatives",
+      "Service Aggregation Platform"
     ],
     image: "/images/service_4.jpg",
     benefits: ["Citizen-centric design", "Transparency focus", "Efficiency gains"]

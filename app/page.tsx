@@ -2,10 +2,8 @@ import { Metadata } from "next";
 import { Header } from "@/components/layout/Header";
 import { Hero } from "@/components/sections/Hero";
 import { Services } from "@/components/sections/Services";
-import { TrustedBy } from "@/components/sections/TrustedBy";
 import { WhoWeAre } from "@/components/sections/WhoWeAre";
 import { Footer } from "@/components/layout/Footer";
-import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { CaseStudies } from "@/components/sections/CaseStudies";
 import { InsightsPreview } from "@/components/sections/InsightsPreview";
 import { CTA } from "@/components/sections/CTA";
@@ -34,10 +32,8 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <TrustedBy />
         <WhoWeAre />
         <Services />
-        <WhyChooseUs />
         <CaseStudies />
         <InsightsPreview />
         <CTA />

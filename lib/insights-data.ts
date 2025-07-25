@@ -128,7 +128,7 @@ export const insightsData: Insight[] = [
       <p>Strategic partnerships with banks, mobile money operators, and other financial institutions can accelerate growth and provide access to existing customer bases.</p>
     `
   },
-  {
+  { 
     id: "ai-fintech-africa-opportunities",
     title: "AI in Fintech: Opportunities and Challenges in Africa",
     excerpt: "Exploring how artificial intelligence is transforming financial services across the African continent.",

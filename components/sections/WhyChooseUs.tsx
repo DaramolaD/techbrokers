@@ -97,7 +97,7 @@ export function WhyChooseUs() {
           </h2>
           
           <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-            We don&apos;t just advise—we build. Our team brings real-world experience, speed, and execution power that moves projects forward and gets results.
+            We don&apos;t just advise—we build. Our team brings a combine over 100 years of real-world experience, speed, and execution power that moves projects forward and gets results.
           </p>
         </div>
 

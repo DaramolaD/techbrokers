@@ -86,10 +86,6 @@ export function AboutStory() {
                 </div>
               </div>
             </div>
-
-            <Button size="lg" className="px-8 bg-[#1E40AF] hover:bg-[#1E40AF]/90">
-              Learn More <ArrowRight className="w-4 h-4 ml-2" />
-            </Button>
           </div>
 
           <div className="relative">
@@ -142,46 +138,6 @@ export function AboutStory() {
                 </div>
               );
             })}
-          </div>
-        </div>
-
-        {/* Journey Timeline */}
-        <div>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-semibold leading-tight mb-6">
-              Our Journey
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              From humble beginnings to becoming Africa&apos;s leading digital transformation partner.
-            </p>
-          </div>
-
-          <div className="relative">
-            {/* Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-[#1E40AF]/20"></div>
-            
-            <div className="space-y-12">
-              {milestones.map((milestone, index) => (
-                <div
-                  key={index}
-                  className={`relative flex items-center ${
-                    index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
-                  }`}
-                >
-                  {/* Timeline Dot */}
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[#1E40AF] rounded-full border-4 border-white shadow-lg"></div>
-                  
-                  {/* Content */}
-                  <div className={`w-5/12 ${index % 2 === 0 ? 'pr-8' : 'pl-8'}`}>
-                    <div className="bg-white rounded-xl p-6 border shadow-sm hover:shadow-md transition-shadow">
-                      <div className="text-2xl font-bold text-[#1E40AF] mb-2">{milestone.year}</div>
-                      <h3 className="text-lg font-semibold mb-2">{milestone.title}</h3>
-                      <p className="text-muted-foreground text-sm leading-relaxed">{milestone.description}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </div>

@@ -28,29 +28,6 @@ const methodologies = [
   }
 ];
 
-const successMetrics = [
-  {
-    metric: "98%",
-    label: "Client Satisfaction",
-    description: "Based on post-project surveys"
-  },
-  {
-    metric: "120 days",
-    label: "Average Delivery Time",
-    description: "From concept to launch"
-  },
-  {
-    metric: "200+",
-    label: "Projects Delivered",
-    description: "Across 15+ countries"
-  },
-  {
-    metric: "$2B+",
-    label: "Value Created",
-    description: "For our clients"
-  }
-];
-
 export function ServicesMethodology() {
   return (
     <section className="py-24">

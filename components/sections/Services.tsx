@@ -1,42 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Tag } from "../ui/tag";
-import Image from "next/image";
 import { ArrowRight, Brain, Building2, CreditCard, GraduationCap, Lightbulb, Rocket, Users, Zap } from "lucide-react";
-
-const services = [
-  {
-    title: "Digital Banking Strategy & Transformation",
-    description:
-      "Launch and scale digital banks, super apps, and fintech ecosystems with full-stack support—from architecture to go-live.",
-    features: ["Digital Banking", "Super Apps", "Fintech Ecosystems"],
-    link: "/services/digital-banking-strategy",
-    bgImage: "/images/service_1.jpg",
-  },
-  {
-    title: "Technology Consulting & System Integration",
-    description:
-      "Bridge legacy systems and modern infrastructure through expert-led digital modernization and IT integration.",
-    features: ["Legacy Systems", "Digital Modernization", "IT Integration"],
-    link: "/services/technology-consulting",
-    bgImage: "/images/service_2.jpg",
-  },
-  {
-    title: "Product Innovation & Go-to-Market",
-    description:
-      "Design, validate, and launch fintech products built for growth, user adoption, and regulation.",
-    features: ["Product Design", "User Adoption", "Regulation"],
-    link: "/services/product-innovation",
-    bgImage: "/images/service_3.jpg",
-  },
-  {
-    title: "Payments & Card Services Advisory",
-    description:
-      "Design secure, scalable payments infrastructure across card issuing, merchant, and cross-border channels.",
-    features: ["Card Issuing", "Merchant Services", "Cross-border Payments"],
-    link: "/services/payments-advisory",
-    bgImage: "/images/service_4.jpg",
-  },
-];
 
 const allServices = [
   {

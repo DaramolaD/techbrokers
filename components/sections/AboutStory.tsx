@@ -91,7 +91,7 @@ export function AboutStory() {
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/about.jpg"
+                src="/images/wasiupopool.jpg"
                 alt="Tech Brokers Team - Digital Innovation Experts"
                 width={600}
                 height={400}

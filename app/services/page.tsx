@@ -5,6 +5,7 @@ import { PageHero } from "@/components/sections/PageHero";
 import { ServicesDetailed } from "@/components/sections/ServicesDetailed";
 import { ServicesMethodology } from "@/components/sections/ServicesMethodology";
 import { CTA } from "@/components/sections/CTA";
+import { ServiceListing } from "@/components/sections/ServiceListing";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://techbrokers.com'),
@@ -27,7 +28,8 @@ export default function ServicesPage() {
           title="From Strategy to Execution"
           description="We don't just advise—we build, scale, and deliver. Our comprehensive digital transformation services help institutions, startups, and governments achieve their digital goals with speed and precision."
         />
-        <ServicesDetailed />
+        {/* <ServicesDetailed /> */}
+        <ServiceListing />
         <ServicesMethodology />
         <CTA />
       </main>

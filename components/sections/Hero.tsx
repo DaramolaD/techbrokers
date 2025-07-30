@@ -20,9 +20,9 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto py-10 px-4 sm:px-6 lg:px-8 max-w-8xl relative z-10">
-        <div className="flex items-center justify-start min-h-[80vh]">
-          <div className="text-left space-y-6 lg:space-y-8 max-w-5xl">
+      <div className="container mx-auto pt-0 pb-10 px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
+        <div className="flex items-center justify-start min-h-[40vh]">
+          <div className="text-left space-y-6 lg:space-y-8 max-w-6xl">
             <div className="space-y-4 lg:space-y-6">
               {/* Tag */}
               <Tag
@@ -41,15 +41,12 @@ export function Hero() {
                 Strategy. Speed. Scale.
               </Tag>
 
-              <h1 className="text-3xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tight leading-tight lg:leading-tight text-white">
-                Empowering Financial Institutions, Startups & Governments to
-                Build, Scale, and Lead Digitally
+              <h1 className="text-3xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-6xl font-bold tracking-tight leading-tight lg:leading-tight text-white">
+                Empowering Businesses & Governments to Build and Scale Digitally
               </h1>
 
               <p className="text-lg sm:text-xl lg:text-2xl xl:text-2xl text-white/90 leading-relaxed max-w-4xl font-normal">
-                Tech Brokers Ltd. is your strategy-to-execution partner for
-                digital transformation across fintech, banking, edutech, public
-                innovation and other sectors of the economy.
+                We are your strategy-to-execution partner for digital transformation.
               </p>
             </div>
 

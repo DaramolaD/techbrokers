@@ -25,10 +25,10 @@ export default function AboutPage() {
         <PageHero 
           tag="Our Story"
           title="Leading Digital Innovation in Africa"
-          description="Founded by industry veteran Wasiu Popoola, Tech Brokers Ltd. is more than a consulting firm—we're your execution partner for African innovation. We bridge the gap between strategy and implementation, turning bold ideas into scalable realities."
+          description="Tech Brokers Ltd. is more than a consulting firm—we're your go-to partner for business innovations. We bridge the gap between strategy and implementation, turning bold ideas into scalable realities."
         />
         <AboutStory />
-        <AboutTeam />
+        {/* <AboutTeam /> */}
         <CTA />
       </main>
       <Footer />

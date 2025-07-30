@@ -9,7 +9,7 @@ export function WhoWeAre() {
   return (
     <section className="py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid gap-12 items-center">
           {/* Content */}
           <div className="space-y-8">
             {/* Tag */}
@@ -17,21 +17,21 @@ export function WhoWeAre() {
 
             <div className="space-y-6">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal leading-tight">
-                Your Execution Partner for African Innovation
+                Your Execution Partner
               </h2>
 
               <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
                 <p>
                   Tech Brokers Ltd. is a digital transformation and technology
-                  consulting firm based in Nigeria, helping institutions, banks,
-                  fintechs, universities, startups, and governments innovate
-                  boldly and execute flawlessly.
+                  consulting firm based in Lagos, Nigeria, helping businesses,
+                  banks, fintechs, universities, startups, and governments
+                  innovate boldly and execute flawlessly.
                 </p>
 
                 <p>
-                  Led by industry veteran Wasiu Popoola, we specialize in
+                  Led by industry veterans, we specialize in
                   launching digital banks, modernizing government services, and
-                  accelerating tech-enabled growth across businesses.
+                  accelerating tech-enabled growth across various sectors of the economy.
                 </p>
 
                 <p className="text-xl font-normal italic text-foreground">
@@ -41,7 +41,7 @@ export function WhoWeAre() {
               </div>
             </div>
 
-            <Link href="/about" passHref>
+            {/* <Link href="/about" passHref>
               <Button
                 asChild
                 size="lg"
@@ -51,27 +51,7 @@ export function WhoWeAre() {
                   Meet the Founder <ArrowRight className="text-white w-4 h-4" />
                 </span>
               </Button>
-            </Link>
-          </div>
-
-          {/* Visual/Image */}
-          <div className="relative">
-            <div className="space-y-6">
-              {/* Main Image */}
-              <div className="relative rounded-2xl overflow-hidden shadow-lg">
-                <Image
-                  src="/images/wasiupopool.jpg"
-                  alt="Wasiu Popoola - Founder and CEO of Tech Brokers Ltd, digital transformation expert and fintech consultant"
-                  width={600}
-                  height={400}
-                  className="w-full h-auto object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  priority
-                  quality={90}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-              </div>
-            </div>
+            </Link> */}
           </div>
         </div>
       </div>

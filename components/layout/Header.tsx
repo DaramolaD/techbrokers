@@ -44,7 +44,7 @@ export function Header() {
 
           {/* Desktop CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" size="sm" className="border-[#1E40AF] text-[#1E40AF] hover:bg-[#1E40AF] hover:text-white" asChild>
+            <Button variant="outline" size="lg" className="border-[#1E40AF] text-[#1E40AF] hover:bg-[#1E40AF] hover:text-white" asChild>
               <Link href="/contact">Get Started</Link>
             </Button>
           </div>
@@ -81,7 +81,7 @@ export function Header() {
                 </Link>
               ))}
               <div className="px-3 py-2">
-                <Button variant="outline" size="sm" className="w-full border-[#1E40AF] text-[#1E40AF] hover:bg-[#1E40AF] hover:text-white" asChild>
+                <Button variant="outline" size="lg" className="w-full border-[#1E40AF] text-[#1E40AF] hover:bg-[#1E40AF] hover:text-white" asChild>
                   <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
                     Get Started
                   </Link>

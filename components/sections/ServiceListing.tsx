@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Tag } from "../ui/tag";
 import { ArrowRight, Building2, CreditCard, Lightbulb, Rocket, Zap } from "lucide-react";
 
 const allServices = [
@@ -65,32 +64,12 @@ const allServices = [
   },
 ];
 
-
-export function Services() {
+export function ServiceListing() {
   return (
-    <section className="py-24 bg-primary-tint" id="services">
-      <div className="container grid gap-10 mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid space-y-8">
-          <Tag variant="outline">Services</Tag>
-
-          <div className="space-y-6">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal leading-tight">
-              How We Help You Win
-            </h2>
-
-            <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
-              <p>
-                From intelligent automation to process engineering—we provide end-to-end
-                execution to power your transformation journey. Whether
-                you&apos;re a fintech founder, bank executive, business owners  or government
-                leader, our service model is built to deliver value to your business.
-              </p>
-            </div>
-          </div>
-        </div>
-
+    <section className="py-24 bg-primary-tint">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Unified Services Grid */}
-        <div className="flex flex-wrap justify-center items-center gap-4 ">
+        <div className="flex flex-wrap justify-center items-center gap-4">
           {allServices.map((service, index) => {
             const IconComponent = service.icon;
             return (

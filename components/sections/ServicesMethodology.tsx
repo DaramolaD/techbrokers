@@ -1,32 +1,32 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Lightbulb, Target, Users, Shield, Zap, TrendingUp, Award, CheckCircle } from "lucide-react";
+import { ArrowRight, Zap, TrendingUp, Award, CheckCircle } from "lucide-react";
 
-const methodologies = [
-  {
-    icon: Lightbulb,
-    title: "Design Thinking",
-    description: "Human-centered approach to problem-solving that puts user needs at the core of every solution",
-    benefits: ["User empathy", "Creative solutions", "Iterative improvement"]
-  },
-  {
-    icon: Target,
-    title: "Agile Development",
-    description: "Rapid iteration and continuous delivery ensuring quality and adaptability throughout the project",
-    benefits: ["Fast delivery", "Flexible scope", "Continuous feedback"]
-  },
-  {
-    icon: Users,
-    title: "Collaborative Approach",
-    description: "Working closely with your team to ensure alignment and knowledge transfer",
-    benefits: ["Team alignment", "Knowledge transfer", "Stakeholder buy-in"]
-  },
-  {
-    icon: Shield,
-    title: "Security First",
-    description: "Built-in security measures and compliance standards from day one",
-    benefits: ["Regulatory compliance", "Data protection", "Risk mitigation"]
-  }
-];
+// const methodologies = [
+//   {
+//     icon: Lightbulb,
+//     title: "Design Thinking",
+//     description: "Human-centered approach to problem-solving that puts user needs at the core of every solution",
+//     benefits: ["User empathy", "Creative solutions", "Iterative improvement"]
+//   },
+//   {
+//     icon: Target,
+//     title: "Agile Development",
+//     description: "Rapid iteration and continuous delivery ensuring quality and adaptability throughout the project",
+//     benefits: ["Fast delivery", "Flexible scope", "Continuous feedback"]
+//   },
+//   {
+//     icon: Users,
+//     title: "Collaborative Approach",
+//     description: "Working closely with your team to ensure alignment and knowledge transfer",
+//     benefits: ["Team alignment", "Knowledge transfer", "Stakeholder buy-in"]
+//   },
+//   {
+//     icon: Shield,
+//     title: "Security First",
+//     description: "Built-in security measures and compliance standards from day one",
+//     benefits: ["Regulatory compliance", "Data protection", "Risk mitigation"]
+//   }
+// ];
 
 export function ServicesMethodology() {
   return (
@@ -150,9 +150,9 @@ export function ServicesMethodology() {
                 </div>
               </div>
 
-              <Button size="lg" className="px-8 bg-[#1E40AF] hover:bg-[#1E40AF]/90">
+              {/* <Button size="lg" className="px-8 bg-[#1E40AF] hover:bg-[#1E40AF]/90">
                 Start Your Project <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
+              </Button> */}
             </div>
 
             <div className="bg-gradient-to-br from-[#1E40AF]/10 to-[#1E40AF]/5 rounded-2xl p-8">

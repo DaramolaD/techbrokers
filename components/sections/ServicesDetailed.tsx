@@ -1,143 +1,143 @@
 "use client"
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle, Clock, Target, Zap, Shield, TrendingUp } from "lucide-react";
+import { ArrowRight, CheckCircle } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 
-interface ProcessStep {
-  step: string;
-  title: string;
-  description: string;
-  icon: React.ComponentType<{ className?: string }>;
-  duration: string;
-}
+// interface ProcessStep {
+//   step: string;
+//   title: string;
+//   description: string;
+//   icon: React.ComponentType<{ className?: string }>;
+//   duration: string;
+// }
 
-type ServiceProcesses = {
-  [key: string]: ProcessStep[];
-};
+// type ServiceProcesses = {
+//   [key: string]: ProcessStep[];
+// };
 
-const serviceProcesses: ServiceProcesses = {
-  "Digital Banking": [
-    {
-      step: "01",
-      title: "Regulatory Assessment",
-      description: "Analyze banking regulations and compliance requirements",
-      icon: Shield,
-      duration: "1-2 weeks"
-    },
-    {
-      step: "02",
-      title: "Core System Design",
-      description: "Architect modern core banking infrastructure",
-      icon: Target,
-      duration: "3-4 weeks"
-    },
-    {
-      step: "03",
-      title: "Development & Integration",
-      description: "Build and integrate banking systems with security focus",
-      icon: Zap,
-      duration: "12-16 weeks"
-    },
-    {
-      step: "04",
-      title: "Testing & Compliance",
-      description: "Rigorous testing and regulatory approval process",
-      icon: TrendingUp,
-      duration: "4-6 weeks"
-    }
-  ],
-  "Technology Consulting": [
-    {
-      step: "01",
-      title: "Current State Analysis",
-      description: "Comprehensive assessment of existing technology stack",
-      icon: Target,
-      duration: "2-3 weeks"
-    },
-    {
-      step: "02",
-      title: "Strategy Development",
-      description: "Create technology roadmap and migration strategy",
-      icon: Zap,
-      duration: "3-4 weeks"
-    },
-    {
-      step: "03",
-      title: "Implementation Planning",
-      description: "Detailed implementation plan with risk mitigation",
-      icon: Shield,
-      duration: "2-3 weeks"
-    },
-    {
-      step: "04",
-      title: "Execution & Optimization",
-      description: "Execute strategy with continuous optimization",
-      icon: TrendingUp,
-      duration: "8-12 weeks"
-    }
-  ],
-  "Product Innovation": [
-    {
-      step: "01",
-      title: "Market Research",
-      description: "Deep market analysis and user research",
-      icon: Target,
-      duration: "2-3 weeks"
-    },
-    {
-      step: "02",
-      title: "MVP Design",
-      description: "Rapid prototyping and user experience design",
-      icon: Zap,
-      duration: "3-4 weeks"
-    },
-    {
-      step: "03",
-      title: "Development & Testing",
-      description: "Agile development with user feedback loops",
-      icon: Shield,
-      duration: "6-10 weeks"
-    },
-    {
-      step: "04",
-      title: "Launch & Iteration",
-      description: "Product launch with continuous improvement",
-      icon: TrendingUp,
-      duration: "2-4 weeks"
-    }
-  ],
-  "Government Innovation": [
-    {
-      step: "01",
-      title: "Stakeholder Engagement",
-      description: "Engage government stakeholders and citizens",
-      icon: Target,
-      duration: "2-3 weeks"
-    },
-    {
-      step: "02",
-      title: "Service Design",
-      description: "Design citizen-centric digital services",
-      icon: Zap,
-      duration: "4-5 weeks"
-    },
-    {
-      step: "03",
-      title: "Development & Security",
-      description: "Build secure government systems with compliance",
-      icon: Shield,
-      duration: "10-14 weeks"
-    },
-    {
-      step: "04",
-      title: "Deployment & Training",
-      description: "Deploy with comprehensive training and support",
-      icon: TrendingUp,
-      duration: "3-4 weeks"
-    }
-  ]
-};
+// const serviceProcesses: ServiceProcesses = {
+//   "Digital Banking": [
+//     {
+//       step: "01",
+//       title: "Regulatory Assessment",
+//       description: "Analyze banking regulations and compliance requirements",
+//       icon: Shield,
+//       duration: "1-2 weeks"
+//     },
+//     {
+//       step: "02",
+//       title: "Core System Design",
+//       description: "Architect modern core banking infrastructure",
+//       icon: Target,
+//       duration: "3-4 weeks"
+//     },
+//     {
+//       step: "03",
+//       title: "Development & Integration",
+//       description: "Build and integrate banking systems with security focus",
+//       icon: Zap,
+//       duration: "12-16 weeks"
+//     },
+//     {
+//       step: "04",
+//       title: "Testing & Compliance",
+//       description: "Rigorous testing and regulatory approval process",
+//       icon: TrendingUp,
+//       duration: "4-6 weeks"
+//     }
+//   ],
+//   "Technology Consulting": [
+//     {
+//       step: "01",
+//       title: "Current State Analysis",
+//       description: "Comprehensive assessment of existing technology stack",
+//       icon: Target,
+//       duration: "2-3 weeks"
+//     },
+//     {
+//       step: "02",
+//       title: "Strategy Development",
+//       description: "Create technology roadmap and migration strategy",
+//       icon: Zap,
+//       duration: "3-4 weeks"
+//     },
+//     {
+//       step: "03",
+//       title: "Implementation Planning",
+//       description: "Detailed implementation plan with risk mitigation",
+//       icon: Shield,
+//       duration: "2-3 weeks"
+//     },
+//     {
+//       step: "04",
+//       title: "Execution & Optimization",
+//       description: "Execute strategy with continuous optimization",
+//       icon: TrendingUp,
+//       duration: "8-12 weeks"
+//     }
+//   ],
+//   "Product Innovation": [
+//     {
+//       step: "01",
+//       title: "Market Research",
+//       description: "Deep market analysis and user research",
+//       icon: Target,
+//       duration: "2-3 weeks"
+//     },
+//     {
+//       step: "02",
+//       title: "MVP Design",
+//       description: "Rapid prototyping and user experience design",
+//       icon: Zap,
+//       duration: "3-4 weeks"
+//     },
+//     {
+//       step: "03",
+//       title: "Development & Testing",
+//       description: "Agile development with user feedback loops",
+//       icon: Shield,
+//       duration: "6-10 weeks"
+//     },
+//     {
+//       step: "04",
+//       title: "Launch & Iteration",
+//       description: "Product launch with continuous improvement",
+//       icon: TrendingUp,
+//       duration: "2-4 weeks"
+//     }
+//   ],
+//   "Government Innovation": [
+//     {
+//       step: "01",
+//       title: "Stakeholder Engagement",
+//       description: "Engage government stakeholders and citizens",
+//       icon: Target,
+//       duration: "2-3 weeks"
+//     },
+//     {
+//       step: "02",
+//       title: "Service Design",
+//       description: "Design citizen-centric digital services",
+//       icon: Zap,
+//       duration: "4-5 weeks"
+//     },
+//     {
+//       step: "03",
+//       title: "Development & Security",
+//       description: "Build secure government systems with compliance",
+//       icon: Shield,
+//       duration: "10-14 weeks"
+//     },
+//     {
+//       step: "04",
+//       title: "Deployment & Training",
+//       description: "Deploy with comprehensive training and support",
+//       icon: TrendingUp,
+//       duration: "3-4 weeks"
+//     }
+//   ]
+// };
 
 const detailedServices = [
   {
@@ -200,7 +200,7 @@ const detailedServices = [
 ];
 
 export function ServicesDetailed() {
-  const [selectedService, setSelectedService] = useState("Digital Banking");
+  // const [selectedService, setSelectedService] = useState("Digital Banking");
 
   return (
     <section className="py-24 bg-gradient-to-br from-[#1E40AF]/5 via-white to-[#1E40AF]/5">

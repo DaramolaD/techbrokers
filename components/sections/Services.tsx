@@ -13,6 +13,7 @@ const allServices = [
       "Super app design & agency banking",
       "API architecture & fintech integration",
       "UI/UX optimization",
+      "Fintech MVPs (lending, payments, wealth, insurtech)",
       "Regulatory sandbox navigation"
     ],
     icon: Building2
@@ -22,72 +23,53 @@ const allServices = [
     description: "Bridge legacy systems and modern infrastructure through expert-led digital modernization and IT integration.",
     features: [
       "Legacy-to-cloud migration",
-      "Fintech MVPs (lending, payments, insurtech)",
       "AI, RPA & Intelligent Automation",
-      "Gateway integration (Visa, NIBSS, etc.)",
-      "Risk scoring & fraud detection",
       "Chatbots, IVR & document intelligence",
       "GenAI use cases"
     ],
     icon: Zap
   },
   {
-    title: "Product Innovation & Go-to-Market",
+    title: "Product Innovation",
     description: "Design, validate, and launch fintech products built for growth, user adoption, and regulation.",
     features: [
-      "Payments & Card Services Advisory",
-      "Financial Inclusion & Ecosystem Solutions",
-      "Strategic Advisory & CxO Services",
-      "EdTech, GovTech & University Digitalization",
+      "Product Strategy & Roadmap",
+      "User Experience Design",
+      "Market Testing & Validation",
+      "MVP Development",
+    ],
+    icon: Rocket
+  },
+  {
+    title: "Go-to-Market",
+    description: "Design, validate, and launch fintech products built for growth, user adoption, and regulation.",
+    features: [
+      'Africa expansion strategy',
+      "Market Research",
+      "Market Penetration Strategy",
       "Startup Acceleration & Venture Readiness",
-      "Card programs (debit, credit, prepaid)",
-      "G2P payment systems"
     ],
     icon: Rocket
   },
   {
     title: "Payments & Card Services Advisory",
     description: "Design secure, scalable payments infrastructure across card issuing, merchant, and cross-border channels.",
-    features: ["Card programs (debit, credit, prepaid)", "G2P payment systems", "Gateway integration (Visa, NIBSS, etc.)"],
+    features: ["Card programs (debit, credit, prepaid)", "G2P payment systems", "Gateway integration (Visa, NIBSS, etc.)", "Revenue Collection & Disbursement"],
     icon: CreditCard
   },
   {
-    title: "AI, RPA & Intelligent Automation",
-    description: "Deploy cutting-edge automation to optimize operations, fight fraud, and enhance customer experience.",
-    features: ["Risk scoring & fraud detection", "Chatbots, IVR & document intelligence", "GenAI use cases"],
-    icon: Brain
-  },
-  {
-    title: "Financial Inclusion & Ecosystem Solutions",
-    description: "Banking innovation for rural populations, MSMEs, cooperatives, and underbanked youth & women.",
-    features: ["Credit union & smart co-op tech", "Remittance & diaspora finance", "Edtech, healthtech, agritech finance enablement"],
-    icon: Users
-  },
-  {
-    title: "Strategic Advisory & CxO Services",
+    title: "Focused Sectors",
     description: "Gain access to board-level tech strategy and interim leadership to guide your digital journey.",
-    features: ["Interim CDO/CIO support", "Financial modeling", "Africa expansion strategy", "Public tech modernization"],
+    features: ["EduTech", "AgriTech", "TransportTech", "Renewable Energy", "Financial Inclusion", "Ecosystem Solutions"],
     icon: Lightbulb
   },
-  {
-    title: "EdTech, GovTech & University Digitalization",
-    description: "Transform public institutions with digital identity, e-learning, and cashless campus ecosystems.",
-    features: ["Student ID cards, wallets, access control", "Capital raise materials", "University ecosystem design"],
-    icon: GraduationCap
-  },
-  {
-    title: "Startup Acceleration & Venture Readiness",
-    description: "Scale your startup with product validation, pitch support, and investor-ready assets.",
-    features: ["Talent sourcing & investor readiness", "Venture build-as-a-service", "Capital raise materials"],
-    icon: Rocket
-  }
 ];
 
 
 export function Services() {
   return (
     <section className="py-24 bg-primary-tint" id="services">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container grid gap-10 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid space-y-8">
           <Tag variant="outline">Services</Tag>
 
@@ -98,24 +80,23 @@ export function Services() {
 
             <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
               <p>
-                From digital transformation and intelligent automation to
-                innovation and startup acceleration—we provide end-to-end
+                From intelligent automation to process engineering—we provide end-to-end
                 execution to power your transformation journey. Whether
                 you&apos;re a fintech founder, bank executive, business owners  or government
-                leader, our service model is built to deliver results at scale.
+                leader, our service model is built to deliver value to your business.
               </p>
             </div>
           </div>
         </div>
 
         {/* Unified Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+        <div className="flex flex-wrap justify-center items-center gap-4 ">
           {allServices.map((service, index) => {
             const IconComponent = service.icon;
             return (
               <div
                 key={index}
-                className="group p-6 border rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-white"
+                className="group p-6 border max-w-[384px] w-full rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-white"
               >
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-[#1E40AF]/10 rounded-lg flex items-center justify-center mr-4">
@@ -123,16 +104,12 @@ export function Services() {
                   </div>
                   <h3 className="text-lg font-semibold text-[#1E40AF]">{service.title}</h3>
                 </div>
-                
-                <p className="text-muted-foreground text-sm mb-4">
-                  {service.description}
-                </p>
 
                 <ul className="space-y-2 mb-4">
                   {service.features.slice(0, 4).map((feature, featureIndex) => (
                     <li
                       key={featureIndex}
-                      className="flex items-center text-xs text-muted-foreground"
+                      className="flex items-center text-md text-muted-foreground"
                     >
                       <div className="w-1 h-1 bg-[#1E40AF] rounded-full mr-2"></div>
                       {feature}
@@ -155,12 +132,6 @@ export function Services() {
               </div>
             );
           })}
-        </div>
-
-        <div className="text-center mt-12">
-          <Button size="lg" className="px-8 bg-[#1E40AF] hover:bg-[#1E40AF]/90">
-            View All Services
-          </Button>
         </div>
       </div>
     </section>

@@ -5,73 +5,64 @@ const values = [
   {
     icon: Lightbulb,
     title: "Innovation First",
-    description: "We push boundaries and embrace cutting-edge technologies to solve complex challenges"
+    description:
+      "We push boundaries and embrace cutting-edge technologies to solve complex challenges",
   },
   {
     icon: Shield,
     title: "Trust & Integrity",
-    description: "Building lasting relationships through transparency, reliability, and ethical practices"
+    description:
+      "Building lasting relationships through transparency, reliability, and ethical practices",
   },
   {
     icon: Heart,
-    title: "African Excellence",
-    description: "Celebrating and amplifying African talent, innovation, and potential"
+    title: "Excellence",
+    description:
+      "Celebrating and amplifying talent, innovation, and potential",
   },
   {
     icon: Target,
     title: "Results-Driven",
-    description: "We don't just advise—we deliver measurable, transformative outcomes"
-  }
+    description:
+      "We don't just advise—we deliver measurable, transformative outcomes",
+  },
 ];
 
 export function AboutStory() {
   return (
     <section className="py-24 bg-gradient-to-br from-[#1E40AF]/5 via-white to-[#1E40AF]/5">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container grid gap-16 mx-auto px-4 sm:px-6 lg:px-8">
         {/* Mission & Vision */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
-          <div className="space-y-8">
-            <div className="space-y-6">
-              <h2 className="text-3xl sm:text-4xl font-semibold leading-tight">
-                Our Mission & Vision
-              </h2>
-              
-              <div className="space-y-6">
-                <div className="bg-white rounded-xl p-6 border shadow-sm">
-                  <h3 className="text-xl font-semibold text-[#1E40AF] mb-3">Our Mission</h3>
+        <div className="space-y-8">
+          <div className="space-y-6">
+            <h2 className="text-3xl text-center sm:text-4xl font-semibold leading-tight">
+              Our Mission & Vision
+            </h2>
+
+            <div className="max-w-5xl mx-auto my-10 space-y-6">
+              <div className="flex justify-start">
+                <div className="bg-white max-w-2xl rounded-xl p-6 py-10 border shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <h3 className="text-xl font-semibold text-[#1E40AF] mb-3">
+                    Our Vision
+                  </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    To accelerate Africa&apos;s digital transformation by providing strategic guidance, technical expertise, and execution capabilities that enable institutions, startups, and governments to thrive in the digital economy.
-                  </p>
-                </div>
-                
-                <div className="bg-white rounded-xl p-6 border shadow-sm">
-                  <h3 className="text-xl font-semibold text-[#1E40AF] mb-3">Our Vision</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    To be Africa&apos;s most trusted partner for digital innovation, driving sustainable growth and inclusive prosperity across the continent through technology-enabled solutions.
+                    To be most trusted partner for digital innovation, and
+                    transformation.
                   </p>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div className="relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <Image
-                src="/images/wasiupopool.jpg"
-                alt="Tech Brokers Team - Digital Innovation Experts"
-                width={600}
-                height={400}
-                className="w-full h-auto object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-              
-              <div className="absolute bottom-6 left-6 right-6 text-white">
-                <div className="flex items-center space-x-2 mb-2">
-                  <div className="w-2 h-2 bg-[#1E40AF] rounded-full"></div>
-                  <span className="text-sm font-medium">Founded 2014</span>
+              <div className="flex justify-end">
+                <div className="bg-white max-w-2xl rounded-xl p-6 py-10 border shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <h3 className="text-xl font-semibold text-[#1E40AF] mb-3">
+                    Our Mission
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    To leverage digital technology to deliver strategic
+                    guidance, technical expertise, and execution capabilities
+                    that enable businesses and governments to thrive in the
+                    digital economy.
+                  </p>
                 </div>
-                <h3 className="text-xl font-semibold mb-1">Wasiu Popoola</h3>
-                <p className="text-sm opacity-90">Founder & CEO</p>
               </div>
             </div>
           </div>
@@ -84,7 +75,8 @@ export function AboutStory() {
               Our Core Values
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              These principles guide everything we do, from client relationships to innovation strategies.
+              These principles guide everything we do, from client relationships
+              to innovation strategies.
             </p>
           </div>
 
@@ -100,7 +92,9 @@ export function AboutStory() {
                     <IconComponent className="w-8 h-8 text-[#1E40AF]" />
                   </div>
                   <h3 className="text-lg font-semibold mb-3">{value.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{value.description}</p>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {value.description}
+                  </p>
                 </div>
               );
             })}
@@ -109,4 +103,4 @@ export function AboutStory() {
       </div>
     </section>
   );
-} 
+}

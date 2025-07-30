@@ -206,35 +206,10 @@ export function ServicesDetailed() {
     <section className="py-24 bg-gradient-to-br from-[#1E40AF]/5 via-white to-[#1E40AF]/5">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Service Selection */}
-        <div className="mb-16">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl sm:text-4xl font-semibold leading-tight mb-6">
-              Our Service Processes
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Each service has its own specialized approach and timeline.
-            </p>
-          </div>
-
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {Object.keys(serviceProcesses).map((service) => (
-              <button
-                key={service}
-                onClick={() => setSelectedService(service)}
-                className={`px-6 py-3 rounded-lg font-medium transition-all ${
-                  selectedService === service
-                    ? "bg-[#1E40AF] text-white shadow-lg"
-                    : "bg-white text-[#1E40AF] border border-[#1E40AF] hover:bg-[#1E40AF]/10"
-                }`}
-              >
-                {service}
-              </button>
-            ))}
-          </div>
-        </div>
+        {/* <diS */}
 
         {/* Selected Service Process */}
-        <div className="mb-24">
+        {/* <div className="mb-24">
           <div className="text-center mb-12">
             <h3 className="text-2xl font-semibold mb-4">{selectedService} Process</h3>
             <p className="text-muted-foreground">
@@ -270,18 +245,18 @@ export function ServicesDetailed() {
               );
             })}
           </div>
-        </div>
+        </div> */}
 
         {/* Detailed Services */}
         <div>
-          <div className="text-center mb-16">
+          {/* <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-semibold leading-tight mb-6">
               Comprehensive Service Offerings
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               From strategy to execution, we provide end-to-end digital transformation solutions.
             </p>
-          </div>
+          </div> */}
 
           <div className="space-y-16">
             {detailedServices.map((service, index) => (

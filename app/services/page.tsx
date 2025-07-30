@@ -22,12 +22,12 @@ export default function ServicesPage() {
     <div className="min-h-screen">
       <Header />
       <main>
-        <PageHero 
+        {/* <PageHero 
           tag="Our Services"
           title="From Strategy to Execution"
           description="We don't just advise—we build, scale, and deliver. Our comprehensive digital transformation services help institutions, startups, and governments achieve their digital goals with speed and precision."
-        />
-        <ServicesDetailed />
+        /> */}
+        {/* <ServicesDetailed /> */}
         <ServicesMethodology />
         <CTA />
       </main>

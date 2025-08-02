@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center">
+    <section className="relative sm:min-h-screen flex items-center justify-center">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -20,7 +20,7 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto pt-0 pb-10 px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
+      <div className="container mx-auto py-20 sm:pb-10 sm:pt-0 px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
         <div className="flex items-center justify-start min-h-[40vh]">
           <div className="text-left space-y-6 lg:space-y-8 max-w-6xl">
             <div className="space-y-4 lg:space-y-6">
